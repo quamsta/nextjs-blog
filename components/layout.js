@@ -28,7 +28,7 @@ export default function Layout({ children, home }) {
             <header className={styles.header}>
                 {home ? (
                     <>
-                        <Image
+                        {/* <Image
                             unoptimized
                             priority
                             src="/nextjs-blog/images/profile.jpg"
@@ -36,13 +36,13 @@ export default function Layout({ children, home }) {
                             height={144}
                             width={144}
                             alt="me"
-                        />
+                        /> */}
                         <h1 className={utilStyles.heading2Xl}>{name}</h1>
                     </>
                 ) : (
                     <>
                         <Link href="/">
-                            <Image
+                            {/* <Image
                                 unoptimized
                                 priority
                                 src="/nextjs-blog/images/profile.jpg"
@@ -50,7 +50,7 @@ export default function Layout({ children, home }) {
                                 height={108}
                                 width={108}
                                 alt="me"
-                            />
+                            /> */}
                         </Link>
                         <h2 className={utilStyles.headingLg}>
                             <Link href="/" className={utilStyles.colorInherit}>

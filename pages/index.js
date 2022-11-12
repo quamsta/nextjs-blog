@@ -3,7 +3,7 @@ import Layout, { siteTitle } from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
 import { getSortedPostsData } from '../lib/posts';
 import Link from 'next/link';
-import Date from '../components/date';
+import ParsedDate from '../components/date';
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -34,14 +34,14 @@ export default function Home({ allPostsData, foldingStats }) {
         </p>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>My Folding@Home Stats</h2>
+        <h2 className={utilStyles.headingLg}>My <a href="https://foldingathome.org">Folding@Home Stats</a></h2>
 
         <p>
-          Username: {foldingStats.name} <br />
-          Score: {foldingStats.score} <br />
-          Rank: {foldingStats.rank} <br />
-          Last Unit Uploaded: <Date dateString={foldingStats.last} /><br />
-          Number of active clients: {foldingStats.active_7}
+          <strong>Username:</strong> <a href={"https://stats.foldingathome.org/donor/" + foldingStats.name}>{foldingStats.name}</a> <br />
+          <strong>Score:</strong> {foldingStats.score} <br />
+          <strong>Rank:</strong> {foldingStats.rank} <br />
+          <strong>Last Unit Uploaded:</strong> <ParsedDate dateString={foldingStats.last} ago={true} /><br />
+          <strong>Number of active clients:</strong> {foldingStats.active_7}
         </p>
 
       </section>
@@ -53,7 +53,7 @@ export default function Home({ allPostsData, foldingStats }) {
               <Link href={`/posts/${id}`}>{title}</Link>
               <br />
               <small className={utilStyles.lightText}>
-                <Date dateString={date} />
+                <ParsedDate dateString={date} />
               </small>
             </li>
 
