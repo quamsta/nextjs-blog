@@ -4,7 +4,7 @@ import utilStyles from '../styles/utils.module.css';
 import { getSortedPostsData } from '../lib/posts';
 import Link from 'next/link';
 import ParsedDate from '../components/date';
-
+import FoldingDate from '../components/folding-date';
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
 
@@ -40,7 +40,7 @@ export default function Home({ allPostsData, foldingStats }) {
           <strong>Username:</strong> <a href={"https://stats.foldingathome.org/donor/" + foldingStats.name}>{foldingStats.name}</a> <br />
           <strong>Score:</strong> {foldingStats.score} <br />
           <strong>Rank:</strong> {foldingStats.rank} <br />
-          <strong>Last Unit Uploaded:</strong> <ParsedDate dateString={foldingStats.last} ago={true} /><br />
+          <strong>Last Unit Uploaded:</strong> <FoldingDate dateString={foldingStats.last} /><br />
           <strong>Number of active clients:</strong> {foldingStats.active_7}
         </p>
 
