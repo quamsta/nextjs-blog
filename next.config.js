@@ -1,3 +1,5 @@
 module.exports = {
-    images: { loader: "custom" },
+    images: {
+        unoptimized: true,
+    },
 }
