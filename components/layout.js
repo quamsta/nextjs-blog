@@ -8,7 +8,7 @@ export const siteTitle = 'Next.js Sample Website';
 
 export default function Layout({ children, home }) {
     return (
-        <div>
+        <div class="container pt-10 max-w-2xl mx-auto px-4">
             <Head>
                 <link rel="icon" href="/favicon.ico" />
                 <meta
@@ -36,7 +36,9 @@ export default function Layout({ children, home }) {
                             width={144}
                             alt="me"
                         /> */}
-                        <h1>{name}</h1>
+                        <h1 className="text-3xl font-bold mb-3">
+                            {name}
+                        </h1>
                     </>
                 ) : (
                     <>
