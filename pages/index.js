@@ -33,9 +33,9 @@ export default function Home({ allPostsData, foldingStats }) {
           <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
         </p>
       </section>
-      <section>
-        <h2>My <a href="https://foldingathome.org">Folding@Home Stats</a></h2>
 
+      <section>
+        <h2>My <a href="https://foldingathome.org">Folding@Home Stats</a></h2>n
         <p>
           <strong>Username:</strong> <a href={"https://stats.foldingathome.org/donor/" + foldingStats.name}>{foldingStats.name}</a> <br />
           <strong>Score:</strong> {foldingStats.score} <br />
