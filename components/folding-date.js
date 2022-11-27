@@ -1,5 +1,5 @@
-import { formatRelative } from 'date-fns';
-
+import { formatRelative, format } from 'date-fns';
+import dynamic from 'next/dynamic'
 
 export default function FoldingDate({ dateString }) {
 
@@ -7,6 +7,6 @@ export default function FoldingDate({ dateString }) {
     const date = new Date(formattedTimestamp);
     const now = new Date;
 
-    return <time dateTime={dateString}>{formatRelative(date, now)}</time>;
+    return <time dateTime={dateString} suppressHydrationWarning>{formatRelative(date, now)} {format(date, 'z')}</time>;
 
 }
