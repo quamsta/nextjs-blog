@@ -34,7 +34,7 @@ export default function Home({ allPostsData, foldingStats }) {
         </p>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>My <a href="https://foldingathome.org">Folding@Home Stats</a></h2>
+        <h2 className={utilStyles.headingLg}>My <a href="https://foldingathome.org">Folding@Home</a> Stats</h2>
 
         <p>
           <strong>Username:</strong> <a href={"https://stats.foldingathome.org/donor/" + foldingStats.name}>{foldingStats.name}</a> <br />
