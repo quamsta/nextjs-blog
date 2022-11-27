@@ -37,7 +37,7 @@ export default function Home({ allPostsData, foldingStats }) {
       </section>
 
       <section>
-        <h2>My <a href="https://foldingathome.org">Folding@Home Stats</a></h2>n
+        <h2>My <a href="https://foldingathome.org">Folding@Home</a> Stats</h2>n
         <p>
           <strong>Username:</strong> <a href={"https://stats.foldingathome.org/donor/" + foldingStats.name}>{foldingStats.name}</a> <br />
           <strong>Score:</strong> {foldingStats.score} <br />
