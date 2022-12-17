@@ -5,8 +5,8 @@ import boxStyles from '../components/Box.module.css';
 import { loadFoldingStatsData } from '../lib/foldingstats';
 import Link from 'next/link';
 import Box from '../components/Box';
-import ParsedDate from '../components/date';
-import FoldingDate from '../components/folding-date';
+import ParsedDate from '../components/ParsedDate';
+import FoldingDate from '../components/FoldingDate';
 import FoldingStatsBox from '../components/FoldingStatsBox';
 export async function getStaticProps() {
 

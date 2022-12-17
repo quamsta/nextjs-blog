@@ -1,9 +1,23 @@
 .box {
-    border: 1px solid #ccc;
-    background: #fcfcfc;
+    border: 1px solid;
     padding: 1.2rem;
     font-size: 0.8rem;
     font-family: monospace;
+    color: var(--color-text);
+}
+
+@media (prefers-color-scheme: dark) {
+    .box {
+        background-color: #111;
+        border-color: #555;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    .box {
+        background-color: #fafafa;
+        border-color: #eee;
+    }
 }
 
 @media screen and (min-width: 768px) {

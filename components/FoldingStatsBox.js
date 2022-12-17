@@ -1,6 +1,6 @@
 import Box from './Box'
 import boxStyles from './Box.module.css'
-import FoldingDate from './folding-date';
+import FoldingDate from './FoldingDate';
 import Link from 'next/link';
 
 export default function FoldingStatsBox({ foldingStats }) {

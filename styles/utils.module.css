@@ -47,6 +47,6 @@
     margin: 0 0 1.25rem;
 }
 
-.lightText {
-    color: #666;
+.secondaryText {
+    color: var(--color-text-secondary);
 }

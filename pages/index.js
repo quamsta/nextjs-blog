@@ -6,7 +6,7 @@ import { getSortedPostsData } from '../lib/posts';
 import { loadFoldingStatsData } from '../lib/foldingstats';
 import Link from 'next/link';
 import Box from '../components/Box';
-import ParsedDate from '../components/date';
+import ParsedDate from '../components/ParsedDate';
 
 import FoldingStatsBox from '../components/FoldingStatsBox';
 export async function getStaticProps() {
@@ -47,7 +47,7 @@ export default function Home({ allPostsData, foldingStats }) {
             <li className={utilStyles.listItem} key={id}>
               <Link href={`/posts/${id}`}>{title}</Link>
               <br />
-              <small className={utilStyles.lightText}>
+              <small className={utilStyles.secondaryText}>
                 <ParsedDate dateString={date} />
               </small>
             </li>

@@ -1,3 +1,20 @@
+/* 1. Create global variables for text and background color */
+:root {
+    --color-text: black;
+    --color-text-secondary: #666;
+    --color-background: white;
+    --color-link: #911ff5;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-text: white;
+        --color-text-secondary: rgb(186, 186, 186);
+        --color-background: black;
+        --color-link: #a762e3;
+    }
+}
+
 html,
 body {
     padding: 0;
@@ -5,7 +22,8 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
     line-height: 1.6;
     font-size: 18px;
-    background-color: #f8f8f8;
+    color: var(--color-text);
+    background-color: var(--color-background);
 }
 
 * {
@@ -13,7 +31,7 @@ body {
 }
 
 a {
-    color: #911ff5;
+    color: var(--color-link);
     text-decoration: none;
 }
 
