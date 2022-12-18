@@ -29,12 +29,12 @@ export default function Stats({ foldingStats }) {
             <section>
                 <h2>Folding@Home Full Statistics</h2>
                 <p><strong>Username:</strong> <a href={"https://stats.foldingathome.org/donor/" + foldingStats.name}>{foldingStats.name}</a> <br />
-                    <strong>Score:</strong> {foldingStats.score} <br />
-                    <strong>Rank:</strong> {foldingStats.rank} <br />
-                    <strong>Last Unit Uploaded:</strong> <FoldingDate dateString={foldingStats.last} /><br />
+                    <strong>Score:</strong> {foldingStats.score.toLocaleString()} <br />
+                    <strong>Rank:</strong> {foldingStats.rank.toLocaleString()} <br />
+                    <strong>Last work unit uploaded:</strong> <FoldingDate dateString={foldingStats.last} /><br />
                     <strong>Number of active clients:</strong> {foldingStats.active_7}</p>
                 <hr />
-                <p><strong>Number of work units:</strong> {foldingStats.wus}<br />
+                <p><strong>Number of completed work units:</strong> {foldingStats.wus.toLocaleString()}<br />
                     <strong>Number of active clients in the last 50 days:</strong> {foldingStats.active_50}<br />
                     <strong>Teams:</strong>
                 </p>
